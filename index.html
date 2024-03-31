@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order - Izakaya</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-image: url('image1.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        body {
+            background-color: #f8f9fa;
+            padding-top: 60px;
+        }
+
+        .food-img-top {
+            width: 100%; 
+            height: auto; 
+        }
+
+        .food-container {
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        .container-fluid {
+            padding-top: 60px;
+        }
+
+        .btn {
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .card-header {
+            background-color: #f8f9fa;
+        }
+
+        .card-body {
+            background-color: #fff;
+        }
+
+        input[type="number"] {
+            padding: 8px 12px;
+            border-radius: 4px;
+            border: 1px solid #ced4da;
+            transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+        }
+
+        input[type="number"]:focus {
+            border-color: #80bdff;
+            outline: 0;
+            box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+        }
+
+        #total-amount {
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+
+        #pay {
+            margin-top: 10px;
+        }
+
+        #void-item {
+            margin-top: 10px;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <a class="navbar-brand" href="#">Izakaya</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="about.html">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="menu.html">Menu</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Order</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.html">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-8 order-md-1">
+            <div class="card mt-4">
+              <div class="card-header"><h2>Order</h2></div>
+              <div class="card-body">
+                <div class="row">
+                    <div class="col-12 col-md-4">
+                        <div class="card mb-2">
+                          <div class="card-body">
+                            <img class="card-img-top food-img-top" src="food1.jpg" alt="Card 1 Image">
+                            <p><b> Yakitori - 100 Yen </b></p>
+                            <label for="quantityInputA">Quantity:</label>
+                            <input type="number" id="quantityInputA" name="quantityA" min="1"  value="1">
+                            <button type="button" class="btn btn-info float-end">Add to Order</button>
+                          </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-4">
+                        <div class="card mb-2">
+                          <div class="card-body">
+                            <img class="card-img-top food-img-top" src="food2.jpg" alt="Card 1 Image">
+                            <p><b> Okonomiyaki - 700 Yen </b></p>
+                            <label for="quantityInputA">Quantity:</label>
+                            <input type="number" id="quantityInputA" name="quantityA" min="1"  value="1">
+                            <button type="button" class="btn btn-info float-end">Add to Order</button>
+                          </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-4">
+                        <div class="card mb-2">
+                          <div class="card-body">
+                            <img class="card-img-top food-img-top" src="food3.jpg" alt="Card 1 Image">
+                            <p><b> Edamame - 150 Yen </b></p>
+                            <label for="quantityInputA">Quantity:</label>
+                            <input type="number" id="quantityInputA" name="quantityA" min="1"  value="1">
+                            <button type="button" class="btn btn-info float-end">Add to Order</button>
+                          </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12 col-md-4">
+                        <div class="card mb-2">
+                          <div class="card-body">
+                            <img class="card-img-top food-img-top" src="food4.jpg" alt="Card 1 Image">
+                            <p><b> Karaage - 250 Yen </b></p>
+                            <label for="quantityInputA">Quantity:</label>
+                            <input type="number" id="quantityInputA" name="quantityA" min="1"  value="1">
+                            <button type="button" class="btn btn-info float-end">Add to Order</button>
+                          </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-4">
+                        <div class="card mb-2">
+                          <div class="card-body">
+                            <img class="card-img-top food-img-top" src="food5.jpg" alt="Card 1 Image">
+                            <p><b> Tempura - 600 Yen </b></p>
+                            <label for="quantityInputA">Quantity:</label>
+                            <input type="number" id="quantityInputA" name="quantityA" min="1"  value="1">
+                            <button type="button" class="btn btn-info float-end">Add to Order</button>
+                          </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-4">
+                        <div class="card mb-2">
+                          <div class="card-body">
+                            <img class="card-img-top food-img-top" src="food6.jpg" alt="Card 1 Image">
+                            <p><b> Gyoza - 400 Yen </b></p>
+                            <label for="quantityInputA">Quantity:</label>
+                            <input type="number" id="quantityInputA" name="quantityA" min="1"  value="1">
+                            <button type="button" class="btn btn-info float-end">Add to Order</button>
+                          </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12 col-md-4">
+                        <div class="card mb-2">
+                          <div class="card-body">
+                            <img class="card-img-top food-img-top" src="food7.jpg" alt="Card 1 Image">
+                            <p><b> Sashimi - 1500 Yen </b></p>
+                            <label for="quantityInputA">Quantity:</label>
+                            <input type="number" id="quantityInputA" name="quantityA" min="1"  value="1">
+                            <button type="button" class="btn btn-info float-end">Add to Order</button>
+                          </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-4">
+                        <div class="card mb-2">
+                          <div class="card-body">
+                            <img class="card-img-top food-img-top" src="food8.jpg" alt="Card 1 Image">
+                            <p><b> Tamagoyaki - 100 Yen </b></p>
+                            <label for="quantityInputA">Quantity:</label>
+                            <input type="number" id="quantityInputA" name="quantityA" min="1"  value="1">
+                            <button type="button" class="btn btn-info float-end">Add to Order</button>
+                          </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-4">
+                        <div class="card mb-2">
+                          <div class="card-body">
+                            <img class="card-img-top food-img-top" src="food9.jpg" alt="Card 1 Image">
+                            <p><b> Beer - 400 Yen </b></p>
+                            <label for="quantityInputA">Quantity:</label>
+                            <input type="number" id="quantityInputA" name="quantityA" min="1"  value="1">
+                            <button type="button" class="btn btn-info float-end">Add to Order</button>
+                          </div>
+                        </div>
+                    </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 order-md-2">
+            <div class="card mt-4">
+              <div class="card-header">
+                <h2>Ordered Items</h2>
+              </div>
+              <div class="card-body">
+                <div class="card mt-4">
+                    <div class="card-body" id="ordered-items">
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card mt-4">
+                                <div class="card-header">
+                                    <h2>Total Amount</h2>
+                                </div>
+                                <div class="card-body">
+                                    <p id="total-amount">0 Yen</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card mt-4">
+                        <div class="card-body">
+                            <h3>Total:</h3>
+                            <input type="number" id="cash" name="cash">
+                            <button type="button" class="btn btn-danger float-end" id="void-item">Void</button>
+                            <button type="button" class="btn btn-success float-end" id="pay">Pay</button>
+                        </div>
+                    </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    <!-- Bootstrap JS -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+    function updateTotalAmount() {
+        const totalAmountElement = document.getElementById('total-amount');
+        const totalAmount = calculateTotalAmount();
+        totalAmountElement.textContent = totalAmount.toFixed(2) + " Yen";
+    }
+
+    function calculateTotalAmount() {
+        let total = 0;
+        const orderedItems = document.querySelectorAll('#ordered-items .card-body p');
+        orderedItems.forEach(function(item) {
+            const totalPriceString = item.innerText.split('(')[1].split(' ')[0];
+            const totalPrice = parseFloat(totalPriceString);
+            total += totalPrice;
+        });
+        return total;
+    }
+
+    const addToOrderButtons = document.querySelectorAll('.btn.btn-info');
+
+    addToOrderButtons.forEach(function(button) {
+        button.addEventListener('click', function() {
+            const parentCard = button.closest('.card-body');
+            const productName = parentCard.querySelector('b').innerText;
+            const quantity = parseInt(parentCard.querySelector('input[type="number"]').value);
+            const pricePerItem = parseFloat(productName.split(' - ')[1].split(' ')[0]);
+            const totalPrice = pricePerItem * quantity;
+
+            const orderedItemCard = document.createElement('div');
+            orderedItemCard.classList.add('card', 'mt-4');
+
+            const orderedItemCardBody = document.createElement('div');
+            orderedItemCardBody.classList.add('card-body');
+
+            orderedItemCardBody.innerHTML = `<p>${productName} - ${quantity} item/s (${totalPrice} Yen)</p>`;
+
+            document.querySelector('#ordered-items').appendChild(orderedItemCard);
+            orderedItemCard.appendChild(orderedItemCardBody);
+
+            updateTotalAmount();
+        });
+    });
+
+    const voidItemButton = document.getElementById('void-item');
+    voidItemButton.addEventListener('click', function() {
+        const orderedItemsContainer = document.getElementById('ordered-items');
+        const lastItem = orderedItemsContainer.lastElementChild;
+        if (lastItem) {
+            orderedItemsContainer.removeChild(lastItem);
+            updateTotalAmount();
+        }
+    });
+
+    const payButton = document.getElementById('pay');
+    payButton.addEventListener('click', function() {
+        const cashInput = document.getElementById('cash');
+        const cashAmount = parseFloat(cashInput.value);
+        const totalAmount = calculateTotalAmount();
+
+        if (cashAmount >= totalAmount) {
+            const change = cashAmount - totalAmount;
+            alert(`Payment successful! Change: ${change.toFixed(2)} Yen`);
+            clearOrderedItems(); 
+            updateTotalAmount();
+            cashInput.value = '';
+        } else {
+            alert('Insufficient amount!');
+        }
+    });
+
+    function clearOrderedItems() {
+        const orderedItemsContainer = document.getElementById('ordered-items');
+        orderedItemsContainer.innerHTML = ''; 
+    }
+
+    updateTotalAmount();
+});
+    </script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
